@@ -7,6 +7,7 @@ import Sanuli from "../assets/sanuli.jpg";
 import Sakithma from "../assets/sakithma.jpg";
 import Kaveesha from "../assets/kaveesha.jpg";
 import Indumini from "../assets/indumini.jpg";
+import Buddhima from "../assets/assi tresurer - Buddhima Sandaru.jpg";
 
 export default function Team() {
   const members = [
@@ -46,6 +47,12 @@ export default function Team() {
       position: "Assistant Secretary",
       imgUrl: Indumini,
       linkedinUrl: "https://www.linkedin.com/in/indumini-minradha-02b4b7377?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+    },
+    {
+      name: "Buddhima Sandaru",
+      position: "Assistant Treasurer",
+      imgUrl: Buddhima,
+      linkedinUrl: "https://www.linkedin.com/in/sandaru-hewage-4aab3a380/"
     }
   ];
 
@@ -59,25 +66,47 @@ export default function Team() {
           The Executive Board of IEEE EMBS Affinity Group 2026/27 of SLIIT.
         </p>
 
-        <div class="mx-auto grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 pb-24">
-          {members.map((member, index) => (
-            <article key={index} class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl hover:scale-110 transform translate duration-300">
-              <a href={member.linkedinUrl} target="_blank" rel="noopener noreferrer">
-                <div class="relative flex items-end overflow-hidden rounded-xl bg-gray-50">
-                  <img src={member.imgUrl} alt={`${member.name} - ${member.position}`} className={`w-full h-80 object-cover object-top ${member.imgClass || "lg:object-[center_10%]"}`} />
-                </div>
+        <div class="mx-auto flex flex-col gap-12 pb-24 max-w-7xl">
+          <div class="flex flex-wrap justify-center gap-10">
+            {members.slice(0, 4).map((member, index) => (
+              <article key={index} class="w-72 rounded-xl bg-white p-3 shadow-lg hover:shadow-xl hover:scale-110 transform translate duration-300">
+                <a href={member.linkedinUrl} target="_blank" rel="noopener noreferrer">
+                  <div class="relative flex items-end overflow-hidden rounded-xl bg-gray-50">
+                    <img src={member.imgUrl} alt={`${member.name} - ${member.position}`} className={`w-full h-72 object-cover object-top ${member.imgClass || "lg:object-[center_10%]"}`} />
+                  </div>
 
-                <div class="mt-1 p-2">
-                  <h2 class="text-gray-900 font-semibold text-lg">
-                    {member.name}
-                  </h2>
-                  <p class="text-primary mt-1 text-md font-semibold ">
-                    {member.position}
-                  </p>
-                </div>
-              </a>
-            </article>
-          ))}
+                  <div class="mt-2 p-2 text-center">
+                    <h2 class="text-gray-900 font-bold text-lg">
+                      {member.name}
+                    </h2>
+                    <p class="text-primary mt-1 text-sm font-semibold ">
+                      {member.position}
+                    </p>
+                  </div>
+                </a>
+              </article>
+            ))}
+          </div>
+          <div class="flex flex-wrap justify-center gap-10">
+            {members.slice(4).map((member, index) => (
+              <article key={index + 4} class="w-72 rounded-xl bg-white p-3 shadow-lg hover:shadow-xl hover:scale-110 transform translate duration-300">
+                <a href={member.linkedinUrl} target="_blank" rel="noopener noreferrer">
+                  <div class="relative flex items-end overflow-hidden rounded-xl bg-gray-50">
+                    <img src={member.imgUrl} alt={`${member.name} - ${member.position}`} className={`w-full h-72 object-cover object-top ${member.imgClass || "lg:object-[center_10%]"}`} />
+                  </div>
+
+                  <div class="mt-2 p-2 text-center">
+                    <h2 class="text-gray-900 font-bold text-lg">
+                      {member.name}
+                    </h2>
+                    <p class="text-primary mt-1 text-sm font-semibold ">
+                      {member.position}
+                    </p>
+                  </div>
+                </a>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
     </>
