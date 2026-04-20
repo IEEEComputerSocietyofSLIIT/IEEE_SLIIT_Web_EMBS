@@ -13,33 +13,39 @@ export default function Team() {
     {
       name: "Dayanita Goonewardane",
       position: "Chairperson",
-      imgUrl: Dayanita
+      imgUrl: Dayanita,
+      linkedinUrl: "https://www.linkedin.com/in/dayanita-goonewardanerdane-9a29672ab?utm_source=share_via&utm_content=profile&utm_medium=member_android"
     },
     {
       name: "Savidya Deneth",
       position: "Vice Chairperson",
-      imgUrl: Savidya
+      imgUrl: Savidya,
+      linkedinUrl: "http://www.linkedin.com/in/savidya-deneth-542200361"
     },
     {
       name: "Sanuli Samarasinghe",
       position: "Secretary",
-      imgUrl: Sanuli
+      imgUrl: Sanuli,
+      linkedinUrl: "https://lk.linkedin.com/in/sanuli-samarasinghe-335536326"
     },
     {
       name: "Sakithma Rajapaksha",
       position: "Treasurer",
       imgUrl: Sakithma,
-      imgClass: "lg:object-top"
+      imgClass: "lg:object-top",
+      linkedinUrl: "http://www.linkedin.com/in/sakithma-rajapaksha-85a274343"
     },
     {
       name: "Kaveesha Rahubadda",
       position: "Editor",
-      imgUrl: Kaveesha
+      imgUrl: Kaveesha,
+      linkedinUrl: "https://www.linkedin.com/in/kaveesha-rahubadda?utm_source=share_via&utm_content=profile&utm_medium=member_android"
     },
     {
       name: "Indumini Minradha",
       position: "Assistant Secretary",
-      imgUrl: Indumini
+      imgUrl: Indumini,
+      linkedinUrl: "https://www.linkedin.com/in/indumini-minradha-02b4b7377?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
     }
   ];
 
@@ -56,7 +62,7 @@ export default function Team() {
         <div class="mx-auto grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 pb-24">
           {members.map((member, index) => (
             <article key={index} class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl hover:scale-110 transform translate duration-300">
-              <a href="#">
+              <a href={member.linkedinUrl} target="_blank" rel="noopener noreferrer">
                 <div class="relative flex items-end overflow-hidden rounded-xl bg-gray-50">
                   <img src={member.imgUrl} alt={`${member.name} - ${member.position}`} className={`w-full h-80 object-cover object-top ${member.imgClass || "lg:object-[center_10%]"}`} />
                 </div>
